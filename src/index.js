@@ -1,17 +1,3 @@
-/*import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
-import * as serviceWorker from './serviceWorker'
-
-ReactDOM.render(<App />, document.getElementById('root'))
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister()
-*/
-
 //import 'whatwg-fetch'
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -23,6 +9,7 @@ import App from './App'
 import history from './history'
 import { updateMeta } from './DOMUtils'
 import router from './router'
+import * as serviceWorker from './serviceWorker'
 
 // Global (context) variables that can be easily accessed from any React component
 // https://facebook.github.io/react/docs/context.html
@@ -130,7 +117,7 @@ async function onLocationChange(location, action) {
       },
     )
   } catch (error) {
-    if (/*__DEV__*/true) {
+    if (process.env.NODE_ENV === 'development') {
       throw error
     }
 
@@ -160,3 +147,8 @@ if (module.hot) {
     onLocationChange(currentLocation)
   })
 }
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister()

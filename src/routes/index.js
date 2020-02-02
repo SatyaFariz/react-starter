@@ -22,7 +22,7 @@ const routes = {
 }
 
 // The error page is available by permanent url for development mode
-if (/*__DEV__*/ true) {
+if (process.env.NODE_ENV === 'development') {
   routes.children.unshift({
     path: '/error',
     action: require('./error').default,
