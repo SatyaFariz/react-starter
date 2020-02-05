@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from './HomePage'
-//import Layout from '../../components/Layout';
+import Layout from '../Layout';
 
 async function action({ fetch }) {
  /* const resp = await fetch('/graphql', {
@@ -24,7 +24,9 @@ async function action({ fetch }) {
     title: 'React Starter Kit',
     chunks: ['home'],
     component: (
-      <Home />
+      <Layout>
+        <Home />
+      </Layout>
     ), 
   }
 }
