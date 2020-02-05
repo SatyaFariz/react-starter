@@ -5,6 +5,7 @@ import {
   Divider,
   InputBase
 } from '@material-ui/core'
+import { Search } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles({
@@ -25,6 +26,14 @@ const useStyles = makeStyles({
   },
   divider: {
     background: '#efefef'
+  },
+  searchIconContainer: {
+    paddingRight: 15,
+    alignItems: 'center',
+    display: 'flex'
+  },
+  searchIcon: {
+    color: 'gray'
   }
 })
 
@@ -42,6 +51,13 @@ const Component = props => {
               className={c.inputBase}
               defaultValue=""
               placeholder="Search"
+              startAdornment={
+                <div className={c.searchIconContainer}>
+                  <Search
+                    className={c.searchIcon}
+                  />
+                </div>
+              }
             />
           </div>
           
