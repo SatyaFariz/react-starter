@@ -2,7 +2,9 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import { MuiThemeProvider } from '@material-ui/core/styles'
 import AppContext from './AppContext'
+import theme from './theme'
 
 /**
  * The top-level React component setting context (global) variables
@@ -31,10 +33,12 @@ export default function App({ context, children }) {
   // NOTE: If you need to add or modify header, footer etc. of the app,
   // please do that inside the Layout component.
   return (
+    <MuiThemeProvider theme={theme}>
       <AppContext.Provider value={{ context }}>
         {React.Children.only(children)}
       </AppContext.Provider>
-  );
+    </MuiThemeProvider>
+  )
 }
 
 App.propTypes = {

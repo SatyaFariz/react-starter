@@ -3,7 +3,8 @@ import {
   AppBar,
   Toolbar,
   Divider,
-  InputBase
+  InputBase,
+  Avatar
 } from '@material-ui/core'
 import { Search } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/core/styles'
@@ -34,6 +35,14 @@ const useStyles = makeStyles({
   },
   searchIcon: {
     color: 'gray'
+  },
+  rightPanel: {
+    display: 'flex',
+    flexGrow: 1,
+    justifyContent: 'flex-end'
+  },
+  avatar: {
+    background: '#3790ff'
   }
 })
 
@@ -61,6 +70,9 @@ const Component = props => {
             />
           </div>
           
+          <div className={c.rightPanel}>
+            <Avatar className={c.avatar}>F</Avatar>
+          </div>
         </Toolbar>
         <Divider className={c.divider}/>
       </AppBar>
