@@ -1,14 +1,48 @@
 import React from 'react'
-import { 
-  Button
+import {
+  Paper,
 } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
+
+import ProductItem from './ProductItem'
+
+const useStyles = makeStyles({
+  container: {
+    paddingLeft: 200,
+    paddingRight: 200,
+    paddingTop: 20
+  },
+  separator: {
+    height: 15
+  },
+  paper: {
+    borderRadius: 1
+  }
+})
+
 const Component = () => {
+  const c = useStyles()
   return (
-    <div>
-      <h1>HOME PAGE</h1>
-      <Button variant="contained">
-  Primary
-</Button>
+    <div className={c.container}>
+    
+      <Paper elevation={1} className={c.paper}>
+        <ProductItem 
+          image="https://ae01.alicdn.com/kf/Hd2a390b742f24cc2a96535ad7f43a3bat.jpg_200x200.jpg_.webp"
+          name="CHOETECH 100W GaN Fast Dual USB C Charger PD 3.0 For iPhone 11 Pro Max Support AFC FCP QC 3.0 for Samsung S10 Huawei P30 Xiaomi"
+        />
+      </Paper>
+
+      <div className={c.separator}/>
+
+      <Paper elevation={1} className={c.paper}>
+      <img src="https://ae01.alicdn.com/kf/Hd2a390b742f24cc2a96535ad7f43a3bat.jpg_200x200.jpg_.webp"/>
+      </Paper>
+
+      <div className={c.separator}/>
+
+      <Paper elevation={1} className={c.paper}>
+      <img src="https://ae01.alicdn.com/kf/Hd2a390b742f24cc2a96535ad7f43a3bat.jpg_200x200.jpg_.webp"/>
+      </Paper>
     </div>
   )
 }
