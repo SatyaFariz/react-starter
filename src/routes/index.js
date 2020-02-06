@@ -5,7 +5,11 @@ const routes = {
   children: [
     {
       path: '',
-      load: () => import(/* webpackChunkName: 'home' */ './home'),
+      load: () => import('./home'),
+    },
+    {
+      path: '/product',
+      load: () => import('./product-details'),
     },
   ],
 
