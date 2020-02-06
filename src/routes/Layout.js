@@ -77,7 +77,7 @@ const Component = props => {
         <Divider className={c.divider}/>
       </AppBar>
       <Toolbar/>
-      test
+
       {props.children}
     </div>
   )

@@ -1,6 +1,7 @@
 import React from 'react'
 import {
-  Typography
+  Typography,
+  Paper
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 
@@ -9,6 +10,7 @@ import Link from '../../common/Link'
 const useStyles = makeStyles({
   container: {
     maxWidth: 230,
+    borderRadius: 1
   },
 
   innerContainer: {
@@ -37,13 +39,13 @@ const useStyles = makeStyles({
   link: {
     color: 'inherit',
     textDecoration: 'none'
-  }
+  },
 })
 
 const Component = props => {
   const c = useStyles()
   return (
-    <div className={c.container}>
+    <Paper elevation={1} className={c.container}>
       <Link to='/product' className={c.link}>
         <div className={c.innerContainer}>
           <div className={c.imageContainer}>
@@ -58,7 +60,7 @@ const Component = props => {
 
         </div>
       </Link>
-    </div>
+    </Paper>
   )
 }
 
