@@ -36,6 +36,17 @@ const useStyles = makeStyles({
     marginTop: 10
   },
 
+  price: {
+    fontWeight: 600,
+    marginTop: 10,
+    fontStyle: 'italic'
+  },
+  discountedPrice: {
+    textDecoration: 'line-through',
+    color: '#E53935',
+    fontStyle: 'italic'
+  },
+
   link: {
     color: 'inherit',
     textDecoration: 'none'
@@ -57,6 +68,8 @@ const Component = props => {
           </div>
 
           <Typography className={c.name}>{props.name}</Typography>
+          <Typography className={c.price}>Rp100.000</Typography>
+          <Typography className={c.discountedPrice}>Rp150.000</Typography>
 
         </div>
       </Link>
