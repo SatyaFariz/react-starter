@@ -6,10 +6,13 @@ const useStyles = makeStyles({
   container: {
 
   },
-  bigImage: {
+  image: {
  /*   width: 450,
     height: 450,*/
-    objectFit: 'cover'
+    objectFit: 'cover',
+  },
+  zoomContainer: {
+    zIndex: 1
   }
 })
 
@@ -24,8 +27,9 @@ const Component = props => {
       />*/}
 
       <ReactImageMagnify {...{
-          imageClassName: c.bigImage,
-          enlargedImageClassName: c.bigImage,
+          imageClassName: c.image,
+          enlargedImageClassName: c.image,
+          enlargedImageContainerClassName: c.zoomContainer,
           smallImage: {
               alt: 'Wristwatch by Ted Baker London',
               width: 450,

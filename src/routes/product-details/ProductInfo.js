@@ -29,6 +29,7 @@ const Component = props => {
           rating={2.403}
           starDimension="17px"
           starSpacing="1px"
+          starRatedColor="#F9A825"
         />
       </div>
     </div>
