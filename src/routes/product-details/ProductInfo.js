@@ -60,6 +60,14 @@ const useStyles = makeStyles({
     paddingLeft: 10,
     paddingRight: 10
   },
+  highlights: {
+    paddingLeft: 15,
+    display: 'grid',
+    gridGap: '3px'
+  },
+  highlightItem: {
+    fontSize: 'small'
+  }
 })
 
 const Component = props => {
@@ -113,6 +121,40 @@ const Component = props => {
             <MenuItem value="20">M</MenuItem>
           </Select>
         </FormControl>
+      </div>
+
+      <div>
+        <ul className={c.highlights}>
+          <li>
+            <Typography className={c.highlightItem}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus quam, porttitor vitae massa nec.
+            </Typography>
+          </li>
+
+          <li>
+            <Typography className={c.highlightItem}>
+              Vivamus lacinia quam tortor, vel molestie metus cursus non.
+            </Typography>
+          </li>
+
+          <li>
+            <Typography className={c.highlightItem}>
+              Suspendisse pulvinar tempor dignissim. Fusce placerat luctus mauris ut ultricies. Duis luctus leo et purus vehicula consectetur.
+            </Typography>
+          </li>
+
+          <li>
+            <Typography className={c.highlightItem}>
+              Ut quis justo a eros aliquet volutpat eu vitae leo. Sed venenatis justo sed urna tempus feugiat. 
+            </Typography>
+          </li>
+
+          <li>
+            <Typography className={c.highlightItem}>
+              Nunc lobortis in erat ut iaculis. Aliquam pellentesque sem vel libero pulvinar, ac convallis diam laoreet.
+            </Typography>
+          </li>
+        </ul>
       </div>
     </div>
   )
