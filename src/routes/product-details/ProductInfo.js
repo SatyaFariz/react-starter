@@ -2,7 +2,10 @@ import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import {
   Typography,
-  Divider
+  Divider,
+  Select,
+  MenuItem,
+  FormControl
 } from '@material-ui/core'
 import StarRatings from '../../common/StarRatings'
 
@@ -44,7 +47,19 @@ const useStyles = makeStyles({
     fontSize: 12,
     color: 'grey',
     marginLeft: 15
-  }
+  },
+  variationAttribute: {
+    fontWeight: 500,
+    marginBottom: 5
+  },
+  variationContainer: {
+    marginBottom: 15
+  },
+  selectInput: {
+    padding: 7,
+    paddingLeft: 10,
+    paddingRight: 10
+  },
 })
 
 const Component = props => {
@@ -72,6 +87,32 @@ const Component = props => {
         <Typography className={c.price}>Rp100.000</Typography>
         <Typography className={c.discountedPrice}>Rp150.000</Typography>
         <Typography className={c.discountRate}>40%</Typography>
+      </div>
+
+      <div className={c.variationContainer}>
+        <Typography className={c.variationAttribute}>Warna:</Typography>
+        <FormControl variant="outlined">
+          <Select labelId="label" id="select" value="20"
+            classes={{ outlined: c.selectInput }}
+          >
+            <MenuItem value="10">Red</MenuItem>
+            <MenuItem value="20">Black</MenuItem>
+            <MenuItem value="10">Blue</MenuItem>
+            <MenuItem value="20">Grey</MenuItem>
+          </Select>
+        </FormControl>
+      </div>
+
+      <div className={c.variationContainer}>
+        <Typography className={c.variationAttribute}>Ukuran:</Typography>
+        <FormControl variant="outlined">
+          <Select labelId="label" id="select" value="20"
+            classes={{ outlined: c.selectInput }}
+          >
+            <MenuItem value="10">S</MenuItem>
+            <MenuItem value="20">M</MenuItem>
+          </Select>
+        </FormControl>
       </div>
     </div>
   )
