@@ -3,17 +3,27 @@ import { makeStyles } from '@material-ui/styles'
 import {
   Divider,
   Typography,
-  Button
+  Button,
+  Fab
 } from '@material-ui/core'
+import EditIcon from '@material-ui/icons/ShoppingCart';
 import ProductImages from './ProductImages'
 import ProductInfo from './ProductInfo'
 
 const useStyles = makeStyles({
   container: {
+    position: 'relative',
     padding: 15,
     display: 'flex',
     flexDirection: 'row-reverse'
   },
+  fabContainer: {
+    position: 'fixed',
+    right: 0,
+    bottom: 0,
+    padding: 20
+  },
+
   rightCol: {
     width: 1000
   },
@@ -57,6 +67,11 @@ const Component = props => {
   const c = useStyles()
   return (
     <div className={c.container}>
+      <div className={c.fabContainer}>
+      <Fab>
+        <EditIcon />
+      </Fab>
+      </div>
       <div className={c.rightCol}>
         <Button variant="contained" className={c.button}
           fullWidth
