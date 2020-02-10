@@ -50,7 +50,8 @@ const useStyles = makeStyles({
   },
   variationAttribute: {
     fontWeight: 500,
-    marginBottom: 5
+    marginBottom: 5,
+    fontSize: 14
   },
   variationContainer: {
     marginBottom: 15
