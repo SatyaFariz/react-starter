@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     objectFit: 'cover',
   },
   zoomContainer: {
-    zIndex: 1
+    zIndex: 2
   }
 })
 
@@ -32,8 +32,8 @@ const Component = props => {
           enlargedImageContainerClassName: c.zoomContainer,
           smallImage: {
               alt: 'Wristwatch by Ted Baker London',
-              width: 450,
-              height: 450,
+              width: 380,
+              height: 380,
               src: 'https://img.tek.id/img/content/2019/06/27/17621/apple-siapkan-macbook-pro-generasi-baru-siap-meluncur-september-UIL32am9YD.jpg'
           },
           largeImage: {
