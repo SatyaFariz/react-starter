@@ -32,8 +32,8 @@ const Component = props => {
           enlargedImageContainerClassName: c.zoomContainer,
           smallImage: {
               alt: 'Wristwatch by Ted Baker London',
-              width: 380,
-              height: 380,
+              width: 350,
+              height: 350,
               src: 'https://img.tek.id/img/content/2019/06/27/17621/apple-siapkan-macbook-pro-generasi-baru-siap-meluncur-september-UIL32am9YD.jpg'
           },
           largeImage: {
