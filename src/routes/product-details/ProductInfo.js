@@ -11,7 +11,7 @@ import StarRatings from '../../common/StarRatings'
 
 const useStyles = makeStyles({
   container: {
-    paddingLeft: 15
+    paddingLeft: 25
   },
   name: {
     fontSize: 'larger',
