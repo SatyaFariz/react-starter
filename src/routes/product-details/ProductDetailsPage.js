@@ -14,7 +14,11 @@ const useStyles = makeStyles({
     flexDirection: 'row-reverse'
   },
   rightCol: {
-    width: 1200
+    width: 1000
+  },
+  verticalDivider: {
+    paddingLeft: 20,
+    paddingRight: 20
   },
   top: {
     display: 'flex',
@@ -49,6 +53,9 @@ const Component = props => {
   return (
     <div className={c.container}>
       <div className={c.rightCol}>
+      </div>
+      <div className={c.verticalDivider}>
+        <Divider orientation="vertical"/>
       </div>
       <div>
         <div className={c.top}>
