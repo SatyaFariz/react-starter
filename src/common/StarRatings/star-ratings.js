@@ -36,7 +36,7 @@ class StarRatings extends React.Component {
     return this.props.ignoreInlineStyles ? {} : stopColorStyle
   }
 
-  get titleText() {
+ /* get titleText() {
     const {
       typeOfWidget,
       rating: selectedRating
@@ -53,7 +53,7 @@ class StarRatings extends React.Component {
       starText = typeOfWidget
     }
     return `${formattedRating} ${starText}`
-  }
+  }*/
 
   
   get offsetValue() {
@@ -154,7 +154,7 @@ class StarRatings extends React.Component {
     return (
       <div
         className="star-ratings"
-        title={this.titleText}
+    //    title={this.titleText}
         style={this.starRatingsStyle}
       >
         <svg
