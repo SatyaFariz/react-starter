@@ -7,7 +7,7 @@ import {
   MenuItem,
   FormControl
 } from '@material-ui/core'
-import StarRatings from '../../common/StarRatings'
+import { Rating } from '@material-ui/lab'
 
 const useStyles = makeStyles({
   container: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles({
   },
   ratingInfoContainer: {
     display: 'flex',
-    alignItems: 'baseline',
+    alignItems: 'center',
     marginTop: 5,
     marginBottom: 5
   },
@@ -80,11 +80,17 @@ const Component = props => {
       </Typography>
 
       <div className={c.ratingInfoContainer}>
-        <StarRatings
-          rating={2.403}
-          starDimension="17px"
-          starSpacing="1px"
-          starRatedColor="#F9A825"
+        <Rating
+          size="small"
+          name="hover-feedback"
+          value={2.5}
+          precision={0.5}
+          onChange={(event, newValue) => {
+         //   setValue(newValue);
+          }}
+          onChangeActive={(event, newHover) => {
+         //   setHover(newHover);
+          }}
         />
 
         <Typography className={c.reviewsCount}>214 ulasan</Typography>
