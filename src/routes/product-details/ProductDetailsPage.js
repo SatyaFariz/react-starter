@@ -2,7 +2,8 @@ import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import {
   Divider,
-  Typography
+  Typography,
+  Button
 } from '@material-ui/core'
 import ProductImages from './ProductImages'
 import ProductInfo from './ProductInfo'
@@ -45,6 +46,10 @@ const useStyles = makeStyles({
   attributeName: {
     fontWeight: 'bold',
     fontSize: 'small',
+  },
+  button: {
+    elevation: 0,
+    marginBottom: 10
   }
 })
 
@@ -53,10 +58,19 @@ const Component = props => {
   return (
     <div className={c.container}>
       <div className={c.rightCol}>
+        <Button variant="contained" className={c.button}
+          fullWidth
+          disableElevation
+        >
+          Beli sekarang
+        </Button>
+
       </div>
+
       <div className={c.verticalDivider}>
         <Divider orientation="vertical"/>
       </div>
+
       <div>
         <div className={c.top}>
           <ProductImages/>
